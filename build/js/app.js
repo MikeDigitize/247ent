@@ -60,12 +60,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var vjs = __webpack_require__(160);
-
-
-	_reactDom2.default.render(_react2.default.createElement(_videoBanner2.default, null), document.getElementById("test"));
-
-	console.log("hey!", vjs);
+	_reactDom2.default.render(_react2.default.createElement(_videoBanner2.default, null), document.getElementById("header-banner"));
 
 /***/ },
 /* 1 */
@@ -19684,6 +19679,8 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	__webpack_require__(160);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -19706,8 +19703,23 @@
 	        value: function render() {
 	            return _react2.default.createElement(
 	                "div",
-	                { id: "awesome" },
-	                "Awesome"
+	                { className: "banner-wrapper" },
+	                _react2.default.createElement(
+	                    "video",
+	                    { id: "video-banner", className: "video-js ambient", loop: true, autoPlay: true, preload: "auto" },
+	                    _react2.default.createElement("source", { src: "../media/video/video-banner.mp4", type: "video/mp4" }),
+	                    _react2.default.createElement("source", { src: "../media/video/video-banner.webm", type: "video/webm" }),
+	                    _react2.default.createElement("source", { src: "../media/video/video-banner.ogv", type: "video/ogg" })
+	                ),
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: "hero-text" },
+	                    _react2.default.createElement(
+	                        "h3",
+	                        null,
+	                        "Lorem ipsum dolor sit amet."
+	                    )
+	                )
 	            );
 	        }
 	    }]);
