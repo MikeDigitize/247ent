@@ -28,8 +28,30 @@ export default class VideoBanner extends Component {
                     <source src="../media/video/video-banner.webm" type="video/webm" />
                     <source src="../media/video/video-banner.ogv" type="video/ogg" />
                 </video>
+                <div className="banner-nav-holder">
+                    <nav className="navbar navbar-light">
+                        <ul className="nav navbar-nav">
+                            <li className="nav-item active">
+                                <a className="nav-link" href="/">Home</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="#">Deals</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="#">Pricing</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="#">About</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div className="banner-logo-holder">
+                    <img src="../media/images/247-logo.png" alt="247 logo" className="banner-logo" width="100"/>
+                </div>
                 <div className="hero-text">
-                    <h3>Lorem ipsum dolor sit amet.</h3>
+                    <h1>247 Enterprises</h1>
+                    <h2>Exclusive bar supplies</h2>
                 </div>
             </div>
         )

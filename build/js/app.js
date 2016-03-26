@@ -19736,11 +19736,69 @@
 	                ),
 	                _react2.default.createElement(
 	                    "div",
+	                    { className: "banner-nav-holder" },
+	                    _react2.default.createElement(
+	                        "nav",
+	                        { className: "navbar navbar-light" },
+	                        _react2.default.createElement(
+	                            "ul",
+	                            { className: "nav navbar-nav" },
+	                            _react2.default.createElement(
+	                                "li",
+	                                { className: "nav-item active" },
+	                                _react2.default.createElement(
+	                                    "a",
+	                                    { className: "nav-link", href: "/" },
+	                                    "Home"
+	                                )
+	                            ),
+	                            _react2.default.createElement(
+	                                "li",
+	                                { className: "nav-item" },
+	                                _react2.default.createElement(
+	                                    "a",
+	                                    { className: "nav-link", href: "#" },
+	                                    "Deals"
+	                                )
+	                            ),
+	                            _react2.default.createElement(
+	                                "li",
+	                                { className: "nav-item" },
+	                                _react2.default.createElement(
+	                                    "a",
+	                                    { className: "nav-link", href: "#" },
+	                                    "Pricing"
+	                                )
+	                            ),
+	                            _react2.default.createElement(
+	                                "li",
+	                                { className: "nav-item" },
+	                                _react2.default.createElement(
+	                                    "a",
+	                                    { className: "nav-link", href: "#" },
+	                                    "About"
+	                                )
+	                            )
+	                        )
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: "banner-logo-holder" },
+	                    _react2.default.createElement("img", { src: "../media/images/247-logo.png", alt: "247 logo", className: "banner-logo", width: "100" })
+	                ),
+	                _react2.default.createElement(
+	                    "div",
 	                    { className: "hero-text" },
 	                    _react2.default.createElement(
-	                        "h3",
+	                        "h1",
 	                        null,
-	                        "Lorem ipsum dolor sit amet."
+	                        "247 Enterprises"
+	                    ),
+	                    _react2.default.createElement(
+	                        "h2",
+	                        null,
+	                        "Exclusive bar supplies"
 	                    )
 	                )
 	            );

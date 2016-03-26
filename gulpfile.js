@@ -14,6 +14,9 @@ var jsDest = "./build/js";
 var htmlSource = "./src/*.html";
 var htmlDest = "./build";
 
+var fontSource = "./src/styles/fonts/*";
+var fontDest = "./build/fonts";
+
 gulp.task("js", () => {
     return gulp.src(jsSource)
         .pipe(webpack(require("./webpack.config.js")))
@@ -34,10 +37,16 @@ gulp.task("html", () => {
         .pipe(gulp.dest(htmlDest));
 });
 
+gulp.task("fonts", () => {
+    return gulp.src(fontSource)
+        .pipe(gulp.dest(fontDest));
+});
+
+
 gulp.task("watch", function() {
     gulp.watch([sassSource, cssSource], ["styles"]);
     gulp.watch(htmlSource, ["html"]);
     gulp.watch(jsSource, ["js"]);
 });
 
-gulp.task("default", ["styles", "html", "js", "watch"]);
+gulp.task("default", ["fonts", "styles", "html", "js", "watch"]);
