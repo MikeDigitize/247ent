@@ -19679,7 +19679,11 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _domUtils = __webpack_require__(160);
+	var _navBar = __webpack_require__(160);
+
+	var _logo = __webpack_require__(161);
+
+	var _domUtils = __webpack_require__(162);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -19726,7 +19730,7 @@
 	        value: function render() {
 	            return _react2.default.createElement(
 	                "div",
-	                { className: "banner-wrapper", style: { paddingBottom: this.state.wrapperPadding + "%", display: this.state.display } },
+	                { className: "banner-wrapper", style: { display: this.state.display } },
 	                _react2.default.createElement(
 	                    "video",
 	                    { id: "video-banner", loop: true, autoPlay: true, ref: "videoBanner" },
@@ -19737,55 +19741,12 @@
 	                _react2.default.createElement(
 	                    "div",
 	                    { className: "banner-nav-holder" },
-	                    _react2.default.createElement(
-	                        "nav",
-	                        { className: "navbar navbar-light" },
-	                        _react2.default.createElement(
-	                            "ul",
-	                            { className: "nav navbar-nav" },
-	                            _react2.default.createElement(
-	                                "li",
-	                                { className: "nav-item active" },
-	                                _react2.default.createElement(
-	                                    "a",
-	                                    { className: "nav-link", href: "/" },
-	                                    "Home"
-	                                )
-	                            ),
-	                            _react2.default.createElement(
-	                                "li",
-	                                { className: "nav-item" },
-	                                _react2.default.createElement(
-	                                    "a",
-	                                    { className: "nav-link", href: "#" },
-	                                    "Deals"
-	                                )
-	                            ),
-	                            _react2.default.createElement(
-	                                "li",
-	                                { className: "nav-item" },
-	                                _react2.default.createElement(
-	                                    "a",
-	                                    { className: "nav-link", href: "#" },
-	                                    "Pricing"
-	                                )
-	                            ),
-	                            _react2.default.createElement(
-	                                "li",
-	                                { className: "nav-item" },
-	                                _react2.default.createElement(
-	                                    "a",
-	                                    { className: "nav-link", href: "#" },
-	                                    "About"
-	                                )
-	                            )
-	                        )
-	                    )
+	                    _react2.default.createElement(_navBar.NavBar, null)
 	                ),
 	                _react2.default.createElement(
 	                    "div",
 	                    { className: "banner-logo-holder" },
-	                    _react2.default.createElement("img", { src: "../media/images/247-logo.png", alt: "247 logo", className: "banner-logo", width: "100" })
+	                    _react2.default.createElement(_logo.Logo, { width: "100" })
 	                ),
 	                _react2.default.createElement(
 	                    "div",
@@ -19812,6 +19773,91 @@
 
 /***/ },
 /* 160 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.NavBar = undefined;
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var NavBar = exports.NavBar = function NavBar(props) {
+	    return _react2.default.createElement(
+	        "nav",
+	        { className: "navbar navbar-light" },
+	        _react2.default.createElement(
+	            "ul",
+	            { className: "nav navbar-nav" },
+	            _react2.default.createElement(
+	                "li",
+	                { className: "nav-item active" },
+	                _react2.default.createElement(
+	                    "a",
+	                    { className: "nav-link", href: "/" },
+	                    "Home"
+	                )
+	            ),
+	            _react2.default.createElement(
+	                "li",
+	                { className: "nav-item" },
+	                _react2.default.createElement(
+	                    "a",
+	                    { className: "nav-link", href: "#" },
+	                    "Deals"
+	                )
+	            ),
+	            _react2.default.createElement(
+	                "li",
+	                { className: "nav-item" },
+	                _react2.default.createElement(
+	                    "a",
+	                    { className: "nav-link", href: "#" },
+	                    "Pricing"
+	                )
+	            ),
+	            _react2.default.createElement(
+	                "li",
+	                { className: "nav-item" },
+	                _react2.default.createElement(
+	                    "a",
+	                    { className: "nav-link", href: "#" },
+	                    "About"
+	                )
+	            )
+	        )
+	    );
+	};
+
+/***/ },
+/* 161 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.Logo = undefined;
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Logo = exports.Logo = function Logo(props) {
+	  return _react2.default.createElement("img", { src: "../media/images/247-logo.png", alt: "247 logo", className: "banner-logo", width: props.width });
+	};
+
+/***/ },
+/* 162 */
 /***/ function(module, exports) {
 
 	"use strict";
