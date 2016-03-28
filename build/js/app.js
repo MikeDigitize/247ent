@@ -19683,7 +19683,7 @@
 
 	var _logo = __webpack_require__(161);
 
-	var _domUtils = __webpack_require__(162);
+	var _emailSignup = __webpack_require__(162);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -19746,7 +19746,12 @@
 	                _react2.default.createElement(
 	                    "div",
 	                    { className: "banner-logo-holder" },
-	                    _react2.default.createElement(_logo.Logo, { width: "100" })
+	                    _react2.default.createElement(_logo.Logo, null)
+	                ),
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: "banner-email-signup" },
+	                    _react2.default.createElement(_emailSignup.SignupForm, null)
 	                ),
 	                _react2.default.createElement(
 	                    "div",
@@ -19853,34 +19858,47 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var Logo = exports.Logo = function Logo(props) {
-	  return _react2.default.createElement("img", { src: "../media/images/247-logo.png", alt: "247 logo", className: "banner-logo", width: props.width });
+	  return _react2.default.createElement("img", { src: "../media/images/247-logo.png", alt: "247 logo", className: "banner-logo" });
 	};
 
 /***/ },
 /* 162 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports.debounce = debounce;
-	function debounce(func, wait, immediate) {
-	    var timeout;
-	    return function () {
-	        var context = this,
-	            args = arguments;
-	        var later = function later() {
-	            timeout = null;
-	            if (!immediate) func.apply(context, args);
-	        };
-	        var callNow = immediate && !timeout;
-	        clearTimeout(timeout);
-	        timeout = setTimeout(later, wait);
-	        if (callNow) func.apply(context, args);
-	    };
-	}
+	exports.SignupForm = undefined;
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var SignupForm = exports.SignupForm = function SignupForm(props) {
+	    return _react2.default.createElement(
+	        "form",
+	        { className: "form-inline" },
+	        _react2.default.createElement(
+	            "div",
+	            { className: "form-group" },
+	            _react2.default.createElement("input", { type: "email", className: "form-control", id: "signup-email", placeholder: "Your email address" })
+	        ),
+	        _react2.default.createElement(
+	            "button",
+	            { type: "submit", className: "btn signup-btn" },
+	            "Sign up"
+	        ),
+	        _react2.default.createElement(
+	            "p",
+	            { className: "email-subtitle" },
+	            "Receive our exclusive daily offers in your inbox"
+	        )
+	    );
+	};
 
 /***/ }
 /******/ ]);

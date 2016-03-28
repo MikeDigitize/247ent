@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { NavBar } from "./nav-bar";
 import { Logo } from "./logo";
-import { debounce } from "../utils/dom-utils";
+import { SignupForm } from "./email-signup";
 
 export default class VideoBanner extends Component {
     constructor() {
@@ -34,7 +34,10 @@ export default class VideoBanner extends Component {
                     <NavBar />
                 </div>
                 <div className="banner-logo-holder">
-                    <Logo width="100" />
+                    <Logo />
+                </div>
+                <div className="banner-email-signup">
+                    <SignupForm />
                 </div>
                 <div className="hero-text">
                     <h1>247 Enterprises</h1>

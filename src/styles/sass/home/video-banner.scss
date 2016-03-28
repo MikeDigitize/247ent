@@ -1,65 +1,130 @@
 @import "../variables";
 @import "../fonts";
+@import "../mixins";
 
 .banner-wrapper {
   position: relative;
   padding-bottom: 50%;
   height: 0;
   width:100%;
+
+  #video-banner {
+    @include banner-element;
+  }
+
+  .hero-text {
+    @include banner-element;
+    h1 {
+      @include banner-hero-text;
+      font-family: $header-font;
+      font-size: 60px;
+      color: $lightgrey;
+      text-shadow: $text-shadow;
+      @media(max-width: $sm) {
+        font-size: 2.5em;
+        top: 35%;
+      }
+    }
+    h2 {
+      @include banner-hero-text;
+      font-family: $text-font;
+      @media(max-width: $sm) {
+        font-size: 1.5em;
+        top: 35%;
+      }
+    }
+  }
+
+  .banner-nav-holder {
+    @include banner-element;
+    .navbar-nav {
+      position: relative;
+      z-index: 2;
+      margin-left: 5%;
+      a.nav-link {
+        color: #fff !important;
+        cursor: pointer;
+        font-family: $text-font;
+        font-weight: 100;
+        transition: opacity 1s ease-out;
+        text-shadow: $text-shadow;
+        &:hover {
+          opacity: 0.7 !important;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .banner-logo-holder {
+    @include banner-element;
+    .banner-logo {
+      position: absolute;
+      bottom: 10px;
+      right: 6%;
+      width: 100px;
+      z-index: 1;
+      transition: width 1s ease-out;
+      @media(max-width: $md) {
+        width:50px;
+      }
+    }
+  }
+
+  .banner-email-signup {
+    @include banner-element;
+    .form-inline {
+      position: relative;
+      z-index: 2;
+      top: 48%;
+      text-align: center;
+      color: $white;
+      font-family: $text-font;
+      text-shadow: $text-shadow;
+      transition: top 1s ease-out;
+      #signup-email {
+        margin-right: 10px;
+        color: darken($black, 20%);
+        &::-webkit-input-placeholder {
+          color: darken($black, 10%);
+        }
+        &:-moz-placeholder {
+          color: darken($black, 10%);
+        }
+        &::-moz-placeholder {
+          color: darken($black, 10%);
+        }
+        &:-ms-input-placeholder {
+          color: darken($black, 10%);
+        }
+      }
+      .signup-btn {
+        background-color: $lightred;
+        transition: background-color 1s ease-in;
+        &:hover {
+          background-color: $darkred;
+        }
+      }
+      .email-subtitle {
+        margin-top: 10px;
+      }
+
+      @media(max-width: $xl) {
+        top: 52%;
+      }
+
+      @media(max-width: $lg) {
+        top: 58%;
+      }
+
+      @media(max-width: $md) {
+        top: 62%;
+      }
+
+    }
+
+    @media(max-width: $sm) {
+      display: none;
+    }
+  }
 }
-
-.banner-logo {
-  position: absolute;
-  bottom: 10px;
-  right: 6%;
-  z-index: 1;
-}
-
-.banner-wrapper #video-banner,
-.banner-wrapper .hero-text,
-.banner-nav-holder,
-.banner-logo-holder {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.banner-nav-holder .navbar-nav {
-  margin-left: 10%;
-}
-
-.banner-nav-holder { z-index: 2}
-.banner-nav-holder a.nav-link {
-  color: #fff !important;
-  cursor: pointer;
-  font-family: "Gotham Rounded";
-  font-weight: 100;
-  transition: opacity 1s ease-out;
-}
-
-.banner-nav-holder a:hover {
-  opacity: 0.7 !important;
-}
-
-.banner-wrapper .hero-text h1, .banner-wrapper .hero-text h2 {
-  position: relative;
-  top: 30%;
-  transform: translateY(-50%);
-  color: #fff;
-  text-align: center;
-}
-
-.banner-wrapper .hero-text h1 {
-  font-family: $header-font;
-  font-size: 60px;
-  color: $lightgrey;
-  text-shadow: $text-shadow;
-}
-
-.banner-wrapper .hero-text h2 {
-  font-family: $text-font;
-}
-
-

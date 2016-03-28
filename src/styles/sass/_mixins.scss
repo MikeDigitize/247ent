@@ -1,0 +1,15 @@
+@mixin banner-element() {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@mixin banner-hero-text() {
+  position: relative;
+  top: 30%;
+  transform: translateY(-50%);
+  color: #fff;
+  text-align: center;
+}
