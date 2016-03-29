@@ -26,9 +26,9 @@ export default class VideoBanner extends Component {
         return (
             <div className="banner-wrapper" style={{ display: this.state.display }}>
                 <video id="video-banner" loop autoPlay ref="videoBanner">
-                    <source src="../media/video/video-banner.mp4" type="video/mp4" />
-                    <source src="../media/video/video-banner.webm" type="video/webm" />
-                    <source src="../media/video/video-banner.ogv" type="video/ogg" />
+                    <source src={`${document.URL.substr(0,document.URL.lastIndexOf('/'))}/media/video/video-banner.mp4`} type="video/mp4" />
+                    <source src={`${document.URL.substr(0,document.URL.lastIndexOf('/'))}/media/video/video-banner.webm`} type="video/webm" />
+                    <source src={`${document.URL.substr(0,document.URL.lastIndexOf('/'))}/media/video/video-banner.ogv`} type="video/ogg" />
                 </video>
                 <div className="banner-nav-holder">
                     <NavBar />

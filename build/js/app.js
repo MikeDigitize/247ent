@@ -19734,9 +19734,9 @@
 	                _react2.default.createElement(
 	                    "video",
 	                    { id: "video-banner", loop: true, autoPlay: true, ref: "videoBanner" },
-	                    _react2.default.createElement("source", { src: "../media/video/video-banner.mp4", type: "video/mp4" }),
-	                    _react2.default.createElement("source", { src: "../media/video/video-banner.webm", type: "video/webm" }),
-	                    _react2.default.createElement("source", { src: "../media/video/video-banner.ogv", type: "video/ogg" })
+	                    _react2.default.createElement("source", { src: document.URL.substr(0, document.URL.lastIndexOf('/')) + "/media/video/video-banner.mp4", type: "video/mp4" }),
+	                    _react2.default.createElement("source", { src: document.URL.substr(0, document.URL.lastIndexOf('/')) + "/media/video/video-banner.webm", type: "video/webm" }),
+	                    _react2.default.createElement("source", { src: document.URL.substr(0, document.URL.lastIndexOf('/')) + "/media/video/video-banner.ogv", type: "video/ogg" })
 	                ),
 	                _react2.default.createElement(
 	                    "div",
@@ -19858,7 +19858,7 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var Logo = exports.Logo = function Logo(props) {
-	  return _react2.default.createElement("img", { src: "../media/images/247-logo.png", alt: "247 logo", className: "banner-logo" });
+	  return _react2.default.createElement("img", { src: document.URL.substr(0, document.URL.lastIndexOf('/')) + "/media/images/247-logo.png", alt: "247 logo", className: "banner-logo" });
 	};
 
 /***/ },
