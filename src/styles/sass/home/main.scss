@@ -1,0 +1,32 @@
+@import "../variables";
+
+.home-info {
+  margin-top: 30px;
+  h3 {
+    color: $lightgrey;
+    font-family: $text-font;
+  }
+
+  p {
+    color: $white;
+    text-align: justify;
+  }
+
+  .why-247 {
+
+    figure {
+      svg {
+        display: inline-block;
+      }
+      figcaption {
+        display: inline-block;
+        margin-left: 20px;
+        vertical-align: top;
+        color: $white;
+      }
+    }
+
+
+  }
+
+}
