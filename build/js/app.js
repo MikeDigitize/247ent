@@ -58,9 +58,14 @@
 
 	var _videoBanner2 = _interopRequireDefault(_videoBanner);
 
+	var _dealHolder = __webpack_require__(163);
+
+	var _dealHolder2 = _interopRequireDefault(_dealHolder);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	_reactDom2.default.render(_react2.default.createElement(_videoBanner2.default, null), document.getElementById("header-banner"));
+	_reactDom2.default.render(_react2.default.createElement(_dealHolder2.default, null), document.getElementById("latest-deals"));
 
 /***/ },
 /* 1 */
@@ -19746,7 +19751,7 @@
 	                _react2.default.createElement(
 	                    "div",
 	                    { className: "banner-logo-holder" },
-	                    _react2.default.createElement(_logo.Logo, null)
+	                    _react2.default.createElement(_logo.Logo, { colour: "white", logoClass: "banner-logo" })
 	                ),
 	                _react2.default.createElement(
 	                    "div",
@@ -19847,7 +19852,7 @@
 	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+	    value: true
 	});
 	exports.Logo = undefined;
 
@@ -19858,7 +19863,7 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var Logo = exports.Logo = function Logo(props) {
-	  return _react2.default.createElement("img", { src: document.URL.substr(0, document.URL.lastIndexOf('/')) + "/media/images/247-logo.png", alt: "247 logo", className: "banner-logo" });
+	    return _react2.default.createElement("img", { src: document.URL.substr(0, document.URL.lastIndexOf('/')) + "/media/images/247-logo-" + props.colour + ".png", alt: "247 logo", className: props.logoClass });
 	};
 
 /***/ },
@@ -19896,6 +19901,195 @@
 	            "p",
 	            { className: "email-subtitle" },
 	            "Receive our exclusive daily offers in your inbox"
+	        )
+	    );
+	};
+
+/***/ },
+/* 163 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _deals = __webpack_require__(164);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var DealHolder = function (_Component) {
+	    _inherits(DealHolder, _Component);
+
+	    function DealHolder(props) {
+	        _classCallCheck(this, DealHolder);
+
+	        var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(DealHolder).call(this));
+
+	        _this.state = {
+	            products: [{
+	                title: "Two day special!",
+	                desc: "Grey Goose 1L Vodka",
+	                price: "12.99",
+	                was: "34.99",
+	                valid: "10th - 12th April, 2016",
+	                terms: "When you spend £100 or more on other 247 products. Max 5 per customer. Not to be used in conjunction with any other offer.",
+	                img: "../media/images/deals/grey-goose.png"
+	            }, {
+	                title: "Two day special!",
+	                desc: "Grey Goose 1L Vodka",
+	                price: "12.99",
+	                was: "34.99",
+	                valid: "10th - 12th April, 2016",
+	                terms: "When you spend £100 or more on other 247 products. Max 5 per customer. Not to be used in conjunction with any other offer.",
+	                img: "../media/images/deals/grey-goose.png"
+	            }, {
+	                title: "Two day special!",
+	                desc: "Grey Goose 1L Vodka",
+	                price: "12.99",
+	                was: "34.99",
+	                valid: "10th - 12th April, 2016",
+	                terms: "When you spend £100 or more on other 247 products. Max 5 per customer. Not to be used in conjunction with any other offer.",
+	                img: "../media/images/deals/grey-goose.png"
+	            }]
+	        };
+	        return _this;
+	    }
+
+	    _createClass(DealHolder, [{
+	        key: "createDeals",
+	        value: function createDeals() {
+	            return this.state.products.map(function (product, i) {
+	                return _react2.default.createElement(_deals.Deal, {
+	                    key: product.title + i,
+	                    title: product.title,
+	                    desc: product.desc,
+	                    price: product.price,
+	                    was: product.was,
+	                    valid: product.valid,
+	                    terms: product.terms,
+	                    img: product.img
+	                });
+	            });
+	        }
+	    }, {
+	        key: "render",
+	        value: function render() {
+	            return _react2.default.createElement(
+	                "div",
+	                { className: "col-sm-12 deal-holder" },
+	                _react2.default.createElement(
+	                    "h2",
+	                    null,
+	                    "Latest Deals"
+	                ),
+	                this.createDeals()
+	            );
+	        }
+	    }]);
+
+	    return DealHolder;
+	}(_react.Component);
+
+	exports.default = DealHolder;
+
+/***/ },
+/* 164 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.Deal = undefined;
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _logo = __webpack_require__(161);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Deal = exports.Deal = function Deal(props) {
+	    return _react2.default.createElement(
+	        "div",
+	        { className: "col-lg-4 deal" },
+	        _react2.default.createElement(
+	            "div",
+	            { className: "row" },
+	            _react2.default.createElement(
+	                "div",
+	                { className: "col-sm-4" },
+	                _react2.default.createElement(_logo.Logo, { colour: "red", logoClass: "deal-logo" }),
+	                _react2.default.createElement("img", { src: props.img, alt: props.desc, className: "deal-img" })
+	            ),
+	            _react2.default.createElement(
+	                "div",
+	                { className: "col-sm-8" },
+	                _react2.default.createElement(
+	                    "h3",
+	                    null,
+	                    props.title
+	                ),
+	                _react2.default.createElement(
+	                    "p",
+	                    { className: "deal-date" },
+	                    props.date
+	                ),
+	                _react2.default.createElement(
+	                    "p",
+	                    { className: "deal-desc" },
+	                    props.desc
+	                ),
+	                _react2.default.createElement(
+	                    "p",
+	                    { className: "deal-price-info" },
+	                    "£",
+	                    _react2.default.createElement(
+	                        "span",
+	                        { className: "deal-price" },
+	                        props.price
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "p",
+	                    { className: "deal-was" },
+	                    "RRP £",
+	                    props.was,
+	                    "!"
+	                ),
+	                _react2.default.createElement(
+	                    "p",
+	                    { className: "deal-valid-from-info" },
+	                    "Valid only from"
+	                ),
+	                _react2.default.createElement(
+	                    "p",
+	                    { className: "deal-valid-from" },
+	                    props.valid,
+	                    "!"
+	                ),
+	                _react2.default.createElement(
+	                    "p",
+	                    { className: "deal-terms" },
+	                    props.terms
+	                )
+	            )
 	        )
 	    );
 	};

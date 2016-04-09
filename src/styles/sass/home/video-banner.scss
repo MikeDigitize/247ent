@@ -40,9 +40,9 @@
     .navbar-nav {
       position: relative;
       z-index: 2;
-      margin-left: 5%;
+      margin-left: 7%;
       a.nav-link {
-        color: #fff !important;
+        color: $white !important;
         cursor: pointer;
         font-family: $text-font;
         font-weight: 100;

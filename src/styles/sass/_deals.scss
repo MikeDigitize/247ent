@@ -1,0 +1,73 @@
+@import "variables";
+
+.deal-holder {
+  h2 {
+    color: $black;
+  }
+}
+
+.deal {
+  border: 2px solid $lightmedgrey;
+  padding: 10px;
+  background-color: $lightgrey;
+  .deal-logo {
+    width: 100px;
+  }
+  p {
+    margin-bottom: 5px;
+  }
+  .deal-img {
+    width: 175px;
+    margin-top: 20px;
+    margin-left: -35px;
+  }
+  .deal-desc {
+    font-size: 30px;
+    line-height: 25px;
+    text-align: left;
+    color: $black;
+    text-transform: capitalize;
+    font-family: $header-font !important;
+  }
+  .deal-price-info {
+    color: $black;
+    font-weight: bold;
+    .deal-price {
+      font-size: 50px;
+      font-weight: bold;
+      color: $lightred !important;
+      margin-left: -5px;
+    }
+  }
+  .deal-was {
+    color: $black;
+    font-weight: bold;
+  }
+  .deal-valid-from-info {
+    margin-bottom: -5px;
+    color: $black;
+  }
+  .deal-valid-from {
+    text-align: left;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow:
+            -2px -2px 0 $white,
+            2px -2px 0 $white,
+            -2px 2px 0 $white,
+            2px 2px 0 $white;
+    border-bottom: 1px solid $darkgrey;
+    padding-bottom: 1px;
+  }
+  .deal-terms {
+    font-size: 12px;
+  }
+
+  h3 {
+    color: $lightred !important;
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}

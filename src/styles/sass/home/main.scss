@@ -1,18 +1,23 @@
 @import "../variables";
+@import "../deals";
 
 .home-info {
   margin-top: 30px;
   h3 {
-    color: $lightgrey;
-    font-family: $text-font;
+    color: $black;
+    font-family: $header-font;
   }
 
   p {
-    color: $white;
+    color: $darkgrey;
     text-align: justify;
   }
 
   .why-247 {
+
+    h2 {
+      color: $black;
+    }
 
     figure {
       svg {
@@ -22,11 +27,14 @@
         display: inline-block;
         margin-left: 20px;
         vertical-align: top;
-        color: $white;
+        color: $black;
       }
     }
 
-
   }
 
+}
+
+.further-info {
+  margin-top: 30px;
 }

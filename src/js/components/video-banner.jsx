@@ -34,7 +34,7 @@ export default class VideoBanner extends Component {
                     <NavBar />
                 </div>
                 <div className="banner-logo-holder">
-                    <Logo />
+                    <Logo colour="white" logoClass="banner-logo" />
                 </div>
                 <div className="banner-email-signup">
                     <SignupForm />
