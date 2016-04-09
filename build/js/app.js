@@ -58,7 +58,7 @@
 
 	var _videoBanner2 = _interopRequireDefault(_videoBanner);
 
-	var _dealHolder = __webpack_require__(163);
+	var _dealHolder = __webpack_require__(164);
 
 	var _dealHolder2 = _interopRequireDefault(_dealHolder);
 
@@ -19688,7 +19688,7 @@
 
 	var _logo = __webpack_require__(161);
 
-	var _emailSignup = __webpack_require__(162);
+	var _emailSignup = __webpack_require__(163);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -19860,14 +19860,47 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _domUtils = __webpack_require__(162);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var Logo = exports.Logo = function Logo(props) {
-	    return _react2.default.createElement("img", { src: document.URL.substr(0, document.URL.lastIndexOf('/')) + "/media/images/247-logo-" + props.colour + ".png", alt: "247 logo", className: props.logoClass });
+	    return _react2.default.createElement("img", { src: (0, _domUtils.getAbsoluteUrl)("media/images/247-logo-" + props.colour + ".png"), alt: "247 logo", className: props.logoClass });
 	};
 
 /***/ },
 /* 162 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.debounce = debounce;
+	exports.getAbsoluteUrl = getAbsoluteUrl;
+	function debounce(func, wait, immediate) {
+	    var timeout;
+	    return function () {
+	        var context = this,
+	            args = arguments;
+	        var later = function later() {
+	            timeout = null;
+	            if (!immediate) func.apply(context, args);
+	        };
+	        var callNow = immediate && !timeout;
+	        clearTimeout(timeout);
+	        timeout = setTimeout(later, wait);
+	        if (callNow) func.apply(context, args);
+	    };
+	}
+
+	function getAbsoluteUrl(url) {
+	    return document.URL.substr(0, document.URL.lastIndexOf('/')) + '/' + url;
+	}
+
+/***/ },
+/* 163 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -19906,7 +19939,7 @@
 	};
 
 /***/ },
-/* 163 */
+/* 164 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -19921,7 +19954,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _deals = __webpack_require__(164);
+	var _deals = __webpack_require__(165);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -19947,7 +19980,7 @@
 	                was: "34.99",
 	                valid: "10th - 12th April, 2016",
 	                terms: "When you spend £100 or more on other 247 products. Max 5 per customer. Not to be used in conjunction with any other offer.",
-	                img: "../media/images/deals/grey-goose.png"
+	                img: "media/images/deals/grey-goose.png"
 	            }, {
 	                title: "Two day special!",
 	                desc: "Grey Goose 1L Vodka",
@@ -19955,7 +19988,7 @@
 	                was: "34.99",
 	                valid: "10th - 12th April, 2016",
 	                terms: "When you spend £100 or more on other 247 products. Max 5 per customer. Not to be used in conjunction with any other offer.",
-	                img: "../media/images/deals/grey-goose.png"
+	                img: "media/images/deals/grey-goose.png"
 	            }, {
 	                title: "Two day special!",
 	                desc: "Grey Goose 1L Vodka",
@@ -19963,7 +19996,7 @@
 	                was: "34.99",
 	                valid: "10th - 12th April, 2016",
 	                terms: "When you spend £100 or more on other 247 products. Max 5 per customer. Not to be used in conjunction with any other offer.",
-	                img: "../media/images/deals/grey-goose.png"
+	                img: "media/images/deals/grey-goose.png"
 	            }]
 	        };
 	        return _this;
@@ -20007,7 +20040,7 @@
 	exports.default = DealHolder;
 
 /***/ },
-/* 164 */
+/* 165 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -20023,6 +20056,8 @@
 
 	var _logo = __webpack_require__(161);
 
+	var _domUtils = __webpack_require__(162);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var Deal = exports.Deal = function Deal(props) {
@@ -20036,7 +20071,7 @@
 	                "div",
 	                { className: "col-sm-4" },
 	                _react2.default.createElement(_logo.Logo, { colour: "red", logoClass: "deal-logo" }),
-	                _react2.default.createElement("img", { src: props.img, alt: props.desc, className: "deal-img" })
+	                _react2.default.createElement("img", { src: (0, _domUtils.getAbsoluteUrl)(props.img), alt: props.desc, className: "deal-img" })
 	            ),
 	            _react2.default.createElement(
 	                "div",

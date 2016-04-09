@@ -12,7 +12,7 @@ export default class DealHolder extends Component {
                 was : "34.99",
                 valid : "10th - 12th April, 2016",
                 terms : "When you spend £100 or more on other 247 products. Max 5 per customer. Not to be used in conjunction with any other offer.",
-                img : "../media/images/deals/grey-goose.png"
+                img : "media/images/deals/grey-goose.png"
             },
             {
                 title : "Two day special!",
@@ -21,7 +21,7 @@ export default class DealHolder extends Component {
                 was : "34.99",
                 valid : "10th - 12th April, 2016",
                 terms : "When you spend £100 or more on other 247 products. Max 5 per customer. Not to be used in conjunction with any other offer.",
-                img : "../media/images/deals/grey-goose.png"
+                img : "media/images/deals/grey-goose.png"
             },
             {
                 title : "Two day special!",
@@ -30,7 +30,7 @@ export default class DealHolder extends Component {
                 was : "34.99",
                 valid : "10th - 12th April, 2016",
                 terms : "When you spend £100 or more on other 247 products. Max 5 per customer. Not to be used in conjunction with any other offer.",
-                img : "../media/images/deals/grey-goose.png"
+                img : "media/images/deals/grey-goose.png"
             }]
         }
     }

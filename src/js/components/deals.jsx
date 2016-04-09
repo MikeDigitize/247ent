@@ -1,12 +1,13 @@
 import React from "react";
 import { Logo } from "./logo";
+import { getAbsoluteUrl } from "../utils/dom-utils";
 
 export const Deal = props =>
     <div className="col-lg-4 deal">
         <div className="row">
             <div className="col-sm-4">
                 <Logo colour="red" logoClass="deal-logo" />
-                <img src={ props.img } alt={ props.desc } className="deal-img" />
+                <img src={ getAbsoluteUrl(props.img) } alt={ props.desc } className="deal-img" />
             </div>
             <div className="col-sm-8">
                 <h3>{ props.title }</h3>

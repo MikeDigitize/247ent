@@ -12,3 +12,7 @@ export function debounce(func, wait, immediate) {
         if (callNow) func.apply(context, args);
     };
 }
+
+export function getAbsoluteUrl(url) {
+    return `${document.URL.substr(0,document.URL.lastIndexOf('/'))}/${url}`;
+}
